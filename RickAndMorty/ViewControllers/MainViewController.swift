@@ -24,8 +24,7 @@ class MainViewController: UICollectionViewController, UICollectionViewDelegateFl
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "character", for: indexPath) as! CharacterCollectionViewCell
-        let character = rickAndMorty?.results[indexPath.item]
-        cell.configur(with: character)
+        cell.configur(with: rickAndMorty?.results[indexPath.item])
         cell.layer.cornerRadius = 15
         return cell
     }
